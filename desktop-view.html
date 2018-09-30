@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <style>
+            div.workspace {
+                width:98%;
+                height:1000px; 
+                background-color:red;
+                margin:auto
+            }
+            div.s1 {
+                background-color:aqua;
+                width:80%;
+                height:40%;
+                margin:auto;
+                padding:10px;
+                display:grid;
+                grid-template-columns: auto auto; 
+            }
+            div.s1 > div {
+                width:100px;
+                height: 100px; 
+                background-color: pink;
+                border-radius: 15px;
+                margin:auto
+            }
+            div.s2 {
+                background-color: orange;
+                width: 80%;
+                height: 60%;
+                margin:auto;
+                padding:10px;
+                display: grid;
+                grid-template-columns: 1fr 2fr 2fr;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="workspace"><!--workspace-->
+                
+                <div class="s1"><!-- 1 to 4-->
+                    <div>
+                        <div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s2"><!-- 5 to 13-->
+                    
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
