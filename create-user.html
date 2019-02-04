@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        
+        
+        <style>
+            div.main 
+            {
+                width: 100%;
+                height: 400px;
+                background: pink;
+                display:flex;
+                justify-content: center;
+            }
+            div.margins
+            {
+                width:96%;
+                height:96%;
+                background: cyan;
+                margin:auto;
+                
+            }
+            div.row
+            {
+                width: 100%;
+                height: 50px;
+                background: blue;
+                display:inline-flex;
+                margin: 10px 0;
+            }
+            div.elems
+            {
+                height: 50px;
+                width: 150px;
+                background: orange;
+                margin:0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="margins">
+                <div class="row">
+                    <div class= elems style="">
+                        Create User
+                    </div>
+                    <div class= elems>
+                        Balance
+                    </div>
+                </div>
+                <div class="row" style="display:block" >
+                    <form style="display:block;margin:auto">
+                        <label for="fname" name="firstname" placeholder="Their name"></label>
+                        <input type="text" id="fname" class= "elems">
+                            fname
+                        <input type="text" id="lname" class= "elems">
+                            lname
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

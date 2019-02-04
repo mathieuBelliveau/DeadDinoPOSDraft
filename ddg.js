@@ -18,10 +18,11 @@ var connection = mysql.createConnection({
 connection.connect(function(err) {
 	if(err) console.log("oh no");
 	console.log("Connected!");
-	connection.query("select * from rooms", function(err,res){
+	connection.query("select * from users", function(err,res,fields){
+		console.log(fields[0].name);
 		if(err)throw err;
-		console.log("result:" + res);
 	})
+	connection.end();
 });
 
 
