@@ -1,8 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <head>        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         
+        <script type="text/javascript">
+            $(document).ready(function() {
+                
+ 
+                
+                $('#newUser').click(function() {
+                    
+                    $(this).text("asdf");
+                    var fName = $('#fname');
+                    var lName = $('#lname');
+                    
+//                    var mysql = require('mysql');
+//                    var connection = mysql.createConnection({
+//                    host: "localhost",
+//                    port: "3306",
+//                    user: "root",
+//                    database: "ddg",
+//                    password: ""
+//                    });
+//                    console.log("New User Created");
+//                    
+//                    connection.query("INSERT INTO ", function(err,res,fields){
+//                        console.log(fields[0].name);
+//                        if(err)throw err;
+//	                })
+	connection.end();
+                    
+                })
+            });
+        </script>
         
         <style>
             div.main 
@@ -42,20 +72,20 @@
         <div class="main">
             <div class="margins">
                 <div class="row">
-                    <div class= elems style="">
+                    <div id="newUser" class="elems" style="text-align: center">
                         Create User
                     </div>
-                    <div class= elems>
+                    <div id="balance" class= elems style="text-align: center">
                         Balance
                     </div>
                 </div>
-                <div class="row" style="display:block" >
+                <div class="row" style="display:flex" >
                     <form style="display:block;margin:auto">
-                        <label for="fname" name="firstname" placeholder="Their name"></label>
+                        <label for="fname" name="firstname" placeholder="Their name">First Name: </label>
                         <input type="text" id="fname" class= "elems">
-                            fname
+                        <label for="lname" name="lastname" placeholder="Last Name">
+                        Last Name: </label>
                         <input type="text" id="lname" class= "elems">
-                            lname
                     </form>
                 </div>
 
