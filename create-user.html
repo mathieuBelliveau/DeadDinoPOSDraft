@@ -13,26 +13,37 @@
                     $(this).text("asdf");
                     var fName = $('#fname');
                     var lName = $('#lname');
+					var conn = createConnection("ddg");
                     
-//                    var mysql = require('mysql');
-//                    var connection = mysql.createConnection({
-//                    host: "localhost",
-//                    port: "3306",
-//                    user: "root",
-//                    database: "ddg",
-//                    password: ""
-//                    });
-//                    console.log("New User Created");
-//                    
-//                    connection.query("INSERT INTO ", function(err,res,fields){
-//                        console.log(fields[0].name);
-//                        if(err)throw err;
-//	                })
-	connection.end();
+					newUser(conn);
+                    console.log("New User Created");
+                    
+					connection.end();
                     
                 })
             });
         </script>
+		<script> //SQL Methods
+			function createConnection(db){
+				var mysql = require('mysql');
+				var connection = mysql.createConnection({
+				host: "localhost",
+				port: "3306",
+				user: "root",
+				database: db,
+				password: ""
+				});
+				return connection;
+			}
+			function newUser(conn){
+				//console.log("New User Created");
+				
+				conn.query("SELECT * from users", function(err,res,fields){
+					console.log(fields[0].name);
+					if(err)throw err;
+				})
+			}
+		</script>
         
         <style>
             div.main 
