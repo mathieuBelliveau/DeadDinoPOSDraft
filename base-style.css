@@ -1,0 +1,129 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:'Exo',sans-serif;
+    font-size:1.5em;
+    color:white;
+}
+header{
+    display:flex;
+    justify-content:space-between;
+    width:auto;
+    padding:0.5em;
+    background-color:black;
+    font-weight:300;
+}
+span.logoContainer {
+    margin-right:0.5em;
+    float:left;
+    width:10.5rem;
+    height:1em;
+}
+img[src="ddg-logo.png"]{
+    width:10.5rem;
+    height:3.5rem;
+    position:absolute;
+    top:-0.0em;
+}
+.panel{
+    display:inline-block;
+    height: auto;
+}
+.left.panel{
+    width:66.66%
+}
+.right.panel{
+    width:33.33%;
+    float:right;
+}
+.panel nav{
+    display:flex;
+    justify-content:space-around;
+    font-weight:500;
+    padding-top:0.5em;
+    background-image:linear-gradient(#222,#111);
+}
+.panel nav span{
+    display:inline-block;
+    background-color:#00c2ff;
+    padding:0em 1em;
+    border-radius:0.5em 0.5em 0 0;
+}
+.panel nav span.inactive{
+    background-color:#006280;
+    background-image:linear-gradient(#006280 33%,#222 100%);
+}
+.panel nav span.inactive:hover{
+    background-image:linear-gradient(#0092be 0%, #0092be 50%,#333 100%);
+    text-decoration:underline;
+    padding-bottom:0.25em;
+    margin-top:-0.25em;
+}
+.panel main{
+    background-color:#00c2ff;
+    height:auto;
+    width:auto;
+    padding:1em;
+    font-size:1.25rem;
+}
+.panel main .session{
+    font-family:'Big Shoulders Text',cursive;
+    font-weight:700;
+    background-color:black;
+    border-radius:1em;
+    padding:1.2rem 0;
+    margin:1em 0;
+}
+.panel main .session div{
+    display:flex;
+    width:auto;
+    justify-content:space-between;
+}
+.panel main .session span span{
+    padding:0.25em 0.5em;
+    margin:0;
+    border:0.125em solid black;
+    position:relative;
+}
+.panel main .session .firstRow span span{
+    top:-0.55rem;
+    background-image:linear-gradient(#333,#222);
+}
+.panel main .session .secondRow span span{
+    top:0.5rem;
+    background-image:linear-gradient(#222,#111);
+}
+.panel main .session span span input[type=text]{
+    font-size:1em;
+    color:white;
+    font-family:'Big Shoulders Text',cursive;
+    font-weight:700;
+    border: 0;
+    border-bottom: 0.0625em solid white;
+    margin-bottom: -0.0625em;
+}
+.panel main .session .firstRow span span input[type=text]{
+    width:2.25em;
+    background-color:#333;
+}
+.panel main .session .secondRow span span input[type=text]{
+    width:11em;
+    background-color:#222;
+}
+.panel main .session span span.topRight{
+    border-radius:0 1em 0 0;
+}
+.panel main .session span span.bottomRight{
+    border-radius:0 0 1em 0;
+}
+.panel main .session span span.topLeft{
+    border-radius:1em 0 0 0;
+}
+.panel main .session span span.bottomLeft{
+    border-radius:0 0 0 1em;
+}
+.panel main .session span.empty{
+    height:2em;
+    position:relative;
+    top:-0.5em;
+}
