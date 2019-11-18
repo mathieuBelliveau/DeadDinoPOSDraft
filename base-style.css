@@ -30,7 +30,7 @@ img[src="ddg-logo.png"]{
     height: auto;
 }
 .left.panel{
-    width:66.66%
+    width:66.67%
 }
 .right.panel{
     width:33.33%;
@@ -67,10 +67,11 @@ img[src="ddg-logo.png"]{
     font-size:1.25rem;
 }
 .panel main .session{
-    font-family:'Big Shoulders Text',cursive;
-    font-weight:700;
+    font-family:'Teko',serif;
+    font-weight:600;
+    font-size:1.1em;
     background-color:black;
-    border-radius:1em;
+    border-radius:1.3em;
     padding:1.2rem 0;
     margin:1em 0;
 }
@@ -79,25 +80,34 @@ img[src="ddg-logo.png"]{
     width:auto;
     justify-content:space-between;
 }
-.panel main .session span span{
+.panel main .session div .left{
+    position: relative;
+    left: 0.2em;
+}
+
+.panel main .session div span.right{
+    position: relative;
+    right: 0.2em;
+}
+.panel main .session div span span{
     padding:0.25em 0.5em;
     margin:0;
     border:0.125em solid black;
     position:relative;
 }
 .panel main .session .firstRow span span{
-    top:-0.55rem;
+    top:-0.45rem;
     background-image:linear-gradient(#333,#222);
 }
 .panel main .session .secondRow span span{
-    top:0.5rem;
+    top:0.45rem;
     background-image:linear-gradient(#222,#111);
 }
-.panel main .session span span input[type=text]{
+.panel main .session div span span input[type=text]{
     font-size:1em;
     color:white;
-    font-family:'Big Shoulders Text',cursive;
-    font-weight:700;
+    font-family:'Teko',serif;
+    font-weight:300;
     border: 0;
     border-bottom: 0.0625em solid white;
     margin-bottom: -0.0625em;
@@ -107,8 +117,13 @@ img[src="ddg-logo.png"]{
     background-color:#333;
 }
 .panel main .session .secondRow span span input[type=text]{
-    width:11em;
     background-color:#222;
+}
+.panel main .session .secondRow .left span input[type=text]{
+    width:16em;
+}
+.panel main .session .secondRow .right span input[type=text]{
+    width:8em;
 }
 .panel main .session span span.topRight{
     border-radius:0 1em 0 0;
@@ -121,9 +136,4 @@ img[src="ddg-logo.png"]{
 }
 .panel main .session span span.bottomLeft{
     border-radius:0 0 0 1em;
-}
-.panel main .session span.empty{
-    height:2em;
-    position:relative;
-    top:-0.5em;
 }
