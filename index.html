@@ -19,14 +19,14 @@
             <span>12:00</span>
             <span>Wednesday, January 1, 2020</span>
         </header>
-        <section class="left panel">
+        <section id="left" class="left panel view1">
             <nav>
-                <span class="active">Sessions</span>
-                <span class="inactive">Users</span>
-                <span class="inactive">Reservations</span>
-                <span class="inactive">Systems</span>
+                <span class="viewButton1" onclick="document.getElementById('left').className = 'left panel view1'">Sessions</span>
+                <span class="viewButton2" onclick="document.getElementById('left').className = 'left panel view2'">Users</span>
+                <span class="viewButton3" onclick="document.getElementById('left').className = 'left panel view3'">Reservations</span>
+                <span class="viewButton4" onclick="document.getElementById('left').className = 'left panel view4'">Systems</span>
             </nav>
-            <main>
+            <main id="view1">
                 <div class="session">
                     <form>
                         <div class="firstRow">
@@ -68,12 +68,24 @@
                     </form>
                 </div>
             </main>
+            <main id="view2">
+                User View
+            </main>
+            <main id="view3">
+                Reservation View
+            </main>
+            <main id="view4">
+                Systems View
+            </main>
         </section>
-        <section class="right panel">
+        <section id="right" class="right panel view1">
             <nav>
-                <span class="active">Room 1</span>
-                <span class="inactive">Room 2</span>
+                <span class="viewButton1" onclick="document.getElementById('right').className = 'right panel view1'">Room 1</span>
+                <span class="viewButton2" onclick="document.getElementById('right').className = 'right panel view2'">Room 2</span>
             </nav>
+            <main>
+                
+            </main>
         </section>
     </body>
 </html>

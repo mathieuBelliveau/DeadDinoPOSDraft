@@ -20,10 +20,10 @@ span.logoContainer {
     height:1em;
 }
 img[src="ddg-logo.png"]{
-    width:10.5rem;
-    height:3.5rem;
-    position:absolute;
-    top:-0.0em;
+    width:6.75em;
+    height:2.25em;
+    margin-top:-0.475em;
+    margin-bottom:-0.5em;
 }
 .panel{
     display:inline-block;
@@ -45,23 +45,35 @@ img[src="ddg-logo.png"]{
 }
 .panel nav span{
     display:inline-block;
-    background-color:#00c2ff;
+    background-color: #006280;
     padding:0em 1em;
-    border-radius:0.5em 0.5em 0 0;
-    transition:padding 0.1s ease-in-out, margin 0.1s ease-in-out;
+    border-radius:0.35em 0.35em 0 0;
+    transition:padding 0.1s, margin 0.1s;
 }
-.panel nav span.inactive{
+.panel.view1 nav span.viewButton1, .panel.view2 nav span.viewButton2, .panel.view3 nav .viewButton3, .panel.view4 nav span.viewButton4 {
+    background-color:#00c2ff;
+    background-image:none;
+    text-decoration:none;
+    padding-bottom:0;
+    margin-top:0;
+    transition:padding 0.2s, margin 0.2s;
+}
+.panel nav span{
     background-color:#006280;
-    background-image:linear-gradient(#006280 33%,#222 100%);
+    background-image:linear-gradient(#0000 40%,#000b 100%);
 }
-.panel nav span.inactive:hover{
-    background-image:linear-gradient(#0092be 50%,#333 100%);
+.panel nav span:hover{
+    background-color:#0092be;
+    background-image:linear-gradient(#0000 45%,#000a 100%);
     text-decoration:underline;
     padding-bottom:0.125em;
     margin-top:-0.125em;
 }
-.panel nav span.inactive:active{
-    background-image:linear-gradient(#00c2ff 50%,#333 100%);
+.panel nav span:active{
+    background-color: #00c2ff;
+    background-image:linear-gradient(#0000 50%,#0009 100%);
+    padding-bottom:0.25em;
+    margin-top:-0.25em;
 }
 .panel main{
     background-color:#00c2ff;
@@ -69,6 +81,12 @@ img[src="ddg-logo.png"]{
     width:auto;
     padding:1em;
     font-size:1.25rem;
+}
+.left.panel main{
+    display:none;
+}
+.left.panel.view1 main#view1, .left.panel.view2 main#view2, .left.panel.view3 main#view3, .left.panel.view4 main#view4{
+    display:block;
 }
 .panel main .session{
     font-family:'Teko',serif;
