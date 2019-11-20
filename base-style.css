@@ -26,6 +26,10 @@ img[src="ddg-logo.png"]{
     margin-top:-0.475em;
     margin-bottom:-0.5em;
 }
+span.time{
+    font-weight:500;
+    letter-spacing:1;
+}
 .panel{
     display:inline-block;
     height:auto;
@@ -78,15 +82,14 @@ img[src="ddg-logo.png"]{
 }
 .panel main{
     background-color:#00c2ff;
-    height:auto;
     width:auto;
     padding:1em;
     font-size:1.25rem;
 }
-.left.panel main{
+.panel main{
     display:none;
 }
-.left.panel.view1 main#view1, .left.panel.view2 main#view2, .left.panel.view3 main#view3, .left.panel.view4 main#view4{
+.panel.view1 main#view1, .panel.view2 main#view2, .panel.view3 main#view3, .panel.view4 main#view4{
     display:block;
 }
 
@@ -195,7 +198,7 @@ img[src="ddg-logo.png"]{
     height:0.66em;
     padding:0 0.0625em;
     margin:0 0 0 0.5em;
-    border:0.0625em solid white;
+    border:0.0675em solid white;
     font-weight:500;
     font-size:1.1em;
     position:relative;
@@ -207,6 +210,14 @@ img[src="ddg-logo.png"]{
 }
 
 /* user panel */
+.left.panel #view2{
+    position:relative;
+}
+.left.panel #view2 .users{
+    overflow-y:scroll;
+    height:30em;
+    width:26em;
+}
 .left.panel #view2 .users table{
     border-collapse:collapse;
     text-align:left;
@@ -224,6 +235,54 @@ img[src="ddg-logo.png"]{
 .left.panel #view2 .users th{
     font-size:0.75em;
     font-weight:600;
+    border-bottom:0.0625em solid white;
+    background-color:#00c2ff;
+    position:sticky;
+    top:0;
+}
+.left.panel #view2 .search{
+    top:2em;
+    right:2em;
+    position:absolute;
+    float:right;
+}
+.left.panel #view2 .search span{
+    font-size:4em;
+    font-weight:700;
+}
+.left.panel #view2 .search input{
+    font-size:3em;
+    width:4.75em;
+    padding:0.125em;
+    float:clear;
+    font-family:'Teko', sans-serif;
+    border-radius:0.5em;
+    
+}
+.left.panel #view2 .search button{
+    background-color:#333;
+    color:white;
+    font-size:1em;
+    padding:0.5em 1.5em;
+    margin:1.25em 1em 0em 1em;
+    text-transform:uppercase;
+    border-radius:0.5em;
+    box-shadow:0 0.125em #000;
+    position:relative;
+    top:0em;
+    transition:box-shadow 0.1s,top 0.1s;
+}
+.left.panel #view2 .search button:hover{
+    text-decoration:underline;
+}
+.left.panel #view2 .search button:active{
+    background-color:black;
+    position:relative;
+    top:0.125em;
+    box-shadow:0 0 #000;
 }
 
-
+/* right panel */
+.right.panel main img[src="desk.png"]{
+    width:6em;
+}
