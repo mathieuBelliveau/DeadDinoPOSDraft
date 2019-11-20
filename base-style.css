@@ -89,9 +89,12 @@ img[src="ddg-logo.png"]{
 .left.panel.view1 main#view1, .left.panel.view2 main#view2, .left.panel.view3 main#view3, .left.panel.view4 main#view4{
     display:block;
 }
+
 /* session panel */
-.left.panel #view1 .session{
+.left.panel #view1{
     font-family:'Teko',serif;
+}
+.left.panel #view1 .session{
     font-weight:600;
     font-size:1.1em;
     background-color:black;
@@ -108,7 +111,6 @@ img[src="ddg-logo.png"]{
     position:relative;
     left:0.2em;
 }
-
 .left.panel #view1 .session div span.right{
     position:relative;
     right:0.2em;
@@ -168,6 +170,42 @@ img[src="ddg-logo.png"]{
 .left.panel #view1 .session span span.bottomLeft{
     border-radius:0 0 0 1em;
 }
+.left.panel #view1 .login {
+    background-color:#00c2ff;
+    background-image:linear-gradient(#333,#222);
+    background-repeat:no-repeat;
+    width:3.9em;
+    padding:0.25em 0.5em;
+    border-radius:1.5em;
+    border:0.3em solid black;
+}
+.left.panel #view1 .login:hover{
+    background-image:linear-gradient(#fff,#9df);
+    color:black;
+}
+.left.panel #view1 .login:hover .plus{
+    border-color:black;
+}
+.left.panel #view1 .login > span{
+    font-weight:700;
+    text-transform:uppercase;
+}
+.left.panel #view1 .login .plus{
+    display:inline-block;
+    height:0.66em;
+    padding:0 0.0625em;
+    margin:0 0 0 0.5em;
+    border:0.0625em solid white;
+    font-weight:500;
+    font-size:1.1em;
+    position:relative;
+    top:0.3em;
+}
+.left.panel #view1 .login .plus span{
+    position:relative;
+    top:-0.31em;
+}
+
 /* user panel */
 .left.panel #view2 .users table{
     border-collapse:collapse;
