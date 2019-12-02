@@ -1,7 +1,15 @@
+:root {
+    --left-panel-color-1: #00c2ff;
+    --left-panel-color-2: #0080ff;
+    --left-panel-color-3: #245eff;
+    --left-panel-color-4: #1d3eff;
+    --right-panel-color-1: #1b2028;
+    --right-panel-color-2: #12151c;
+}
 body{
     margin:0;
     padding:0;
-    font-family:'Exo',sans-serif;
+    font-family:'Exo 2',sans-serif;
     font-size:1.5em;
     color:white;
     background-color:#00c2ff;
@@ -215,9 +223,22 @@ span.time{
 }
 .left.panel #view2 .users{
     overflow-y:scroll;
-    height:30em;
-    width:26em;
+    height:32em;
+    width:26.25em;
 }
+.left.panel #view2 .users::-webkit-scrollbar{
+    width:0.25em
+}
+.left.panel #view2 .users::-webkit-scrollbar-track{
+    background-color:#00c2ff;
+}
+.left.panel #view2 .users::-webkit-scrollbar-thumb{
+    background-color:#00c2ff;
+}
+.left.panel #view2 .users:hover::-webkit-scrollbar-thumb{
+    background-color:#fff8;
+}
+
 .left.panel #view2 .users table{
     border-collapse:collapse;
     text-align:left;
@@ -257,7 +278,7 @@ span.time{
     float:clear;
     font-family:'Teko', sans-serif;
     border-radius:0.5em;
-    
+    border:none;
 }
 .left.panel #view2 .search button{
     background-color:#333;
@@ -270,7 +291,7 @@ span.time{
     box-shadow:0 0.125em #000;
     position:relative;
     top:0em;
-    transition:box-shadow 0.1s,top 0.1s;
+    transition:box-shadow 0.06s,top 0.06s, background-color 0.06s;
 }
 .left.panel #view2 .search button:hover{
     text-decoration:underline;
@@ -280,6 +301,7 @@ span.time{
     position:relative;
     top:0.125em;
     box-shadow:0 0 #000;
+    transition:background-color 0
 }
 
 /* right panel */
