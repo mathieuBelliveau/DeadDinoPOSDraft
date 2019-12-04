@@ -1,10 +1,10 @@
 :root {
-    --left-panel-color-1: #00c2ff;
-    --left-panel-color-2: #0080ff;
-    --left-panel-color-3: #245eff;
-    --left-panel-color-4: #1d3eff;
-    --right-panel-color-1: #1b2028;
-    --right-panel-color-2: #12151c;
+    --view-1-background-color: #00c2ff;
+    --view-2-background-color: #0080ff;
+    --view-3-background-color: #245eff;
+    --view-4-background-color: #1d3eff;
+    --r-view-1-panel-color: #1b2028;
+    --r-view-2-panel-color: #12151c;
 }
 body{
     margin:0;
@@ -63,27 +63,36 @@ span.time{
     border-radius:0.35em 0.35em 0 0;
     transition:padding 0.1s, margin 0.1s, background-color 0.1s;
 }
-.panel.view1 nav span.viewButton1, .panel.view2 nav span.viewButton2, .panel.view3 nav .viewButton3, .panel.view4 nav span.viewButton4 {
-    background-color:#00c2ff;
+.panel.view1 nav .viewButton1, .panel.view2 nav .viewButton2, .panel.view3 nav .viewButton3, .panel.view4 nav .viewButton4{
     background-image:none;
     text-decoration:none;
     padding-bottom:0;
     margin-top:0;
     transition:padding 0.2s, margin 0.2s;
 }
+.panel nav .viewButton1{
+    background-color:var(--view-1-background-color);
+}
+.panel nav .viewButton2{
+    background-color:var(--view-2-background-color);
+}
+.panel nav .viewButton3{
+    background-color:var(--view-3-background-color);
+}
+.panel nav .viewButton4{
+    background-color:var(--view-4-background-color);
+}
 .panel nav span{
-    background-color:#006280;
-    background-image:linear-gradient(#0000 40%,#000b 100%);
+    background-image:linear-gradient(#0004 40%,#000d 100%);
 }
 .panel nav span:hover{
-    background-color:#0092be;
-    background-image:linear-gradient(#0000 45%,#000a 100%);
+    background-image:linear-gradient(#0002 45%,#000c 100%);
     text-decoration:underline;
     padding-bottom:0.125em;
     margin-top:-0.125em;
 }
 .panel nav span:active{
-    background-color:#00c2ff;
+    backgrou/nd-color:#00c2ff;
     background-image:linear-gradient(#0000 50%,#0009 100%);
     padding-bottom:0.25em;
     margin-top:-0.25em;
@@ -104,6 +113,16 @@ span.time{
 /* session panel */
 .left.panel #view1{
     font-family:'Teko',serif;
+    background-color:#00c2ff;
+}
+.left.panel #view2{
+    background-color:#0080ff;
+}
+.left.panel #view3{
+    background-color:#245eff;
+}
+.left.panel #view4{
+    background-color:#1d3eff;
 }
 .left.panel #view1 .session{
     font-weight:600;
@@ -230,15 +249,15 @@ span.time{
     width:0.25em
 }
 .left.panel #view2 .users::-webkit-scrollbar-track{
-    background-color:#00c2ff;
+    background-color:var(--view-2-background-color);
 }
 .left.panel #view2 .users::-webkit-scrollbar-thumb{
-    background-color:#00c2ff;
+    background-color:var(--view-2-background-color);
+    border-radius:0.125em;
 }
 .left.panel #view2 .users:hover::-webkit-scrollbar-thumb{
     background-color:#fff8;
 }
-
 .left.panel #view2 .users table{
     border-collapse:collapse;
     text-align:left;
@@ -256,10 +275,11 @@ span.time{
 .left.panel #view2 .users th{
     font-size:0.75em;
     font-weight:600;
-    border-bottom:0.0625em solid white;
-    background-color:#00c2ff;
+    margin-bottom:-0.0625em;
+    background-color:var(--view-2-background-color);
     position:sticky;
     top:0;
+    text-decoration:underline;
 }
 .left.panel #view2 .search{
     top:2em;
