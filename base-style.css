@@ -1,10 +1,10 @@
 :root {
-    --view-1-background-color: #00c2ff;
-    --view-2-background-color: #0080ff;
-    --view-3-background-color: #245eff;
-    --view-4-background-color: #1d3eff;
-    --r-view-1-panel-color: #1b2028;
-    --r-view-2-panel-color: #12151c;
+    --view-1-background-color: #00b3c1;
+    --view-2-background-color: #1e93d6;
+    --view-3-background-color: #3c72ea;
+    --view-4-background-color: #5a52ff;
+    --r-view-1-background-color: #0a203b;
+    --r-view-2-background-color: #0e194d;
 }
 body{
     margin:0;
@@ -12,7 +12,6 @@ body{
     font-family:'Exo 2',sans-serif;
     font-size:1.5em;
     color:white;
-    background-color:#00c2ff;
 }
 header{
     display:flex;
@@ -58,7 +57,6 @@ span.time{
 }
 .panel nav span{
     display:inline-block;
-    background-color:#006280;
     padding:0em 1em;
     border-radius:0.35em 0.35em 0 0;
     transition:padding 0.1s, margin 0.1s, background-color 0.1s;
@@ -70,35 +68,39 @@ span.time{
     margin-top:0;
     transition:padding 0.2s, margin 0.2s;
 }
-.panel nav .viewButton1{
+.left.panel nav .viewButton1{
     background-color:var(--view-1-background-color);
 }
-.panel nav .viewButton2{
+.left.panel nav .viewButton2{
     background-color:var(--view-2-background-color);
 }
-.panel nav .viewButton3{
+.left.panel nav .viewButton3{
     background-color:var(--view-3-background-color);
 }
-.panel nav .viewButton4{
+.left.panel nav .viewButton4{
     background-color:var(--view-4-background-color);
 }
+.right.panel nav .viewButton1{
+    background-color:var(--r-view-1-background-color);
+}
+.right.panel nav .viewButton2{
+    background-color:var(--r-view-2-background-color);
+}
 .panel nav span{
-    background-image:linear-gradient(#0004 40%,#000d 100%);
+    background-image:linear-gradient(#0006 40%,#000b 100%);
 }
 .panel nav span:hover{
-    background-image:linear-gradient(#0002 45%,#000c 100%);
+    background-image:linear-gradient(#0003 45%,#000a 100%);
     text-decoration:underline;
     padding-bottom:0.125em;
     margin-top:-0.125em;
 }
 .panel nav span:active{
-    backgrou/nd-color:#00c2ff;
     background-image:linear-gradient(#0000 50%,#0009 100%);
     padding-bottom:0.25em;
     margin-top:-0.25em;
 }
 .panel main{
-    background-color:#00c2ff;
     width:auto;
     padding:1em;
     font-size:1.25rem;
@@ -109,20 +111,27 @@ span.time{
 .panel.view1 main#view1, .panel.view2 main#view2, .panel.view3 main#view3, .panel.view4 main#view4{
     display:block;
 }
-
-/* session panel */
 .left.panel #view1{
-    font-family:'Teko',serif;
-    background-color:#00c2ff;
+    background-color:var(--view-1-background-color);
 }
 .left.panel #view2{
-    background-color:#0080ff;
+    background-color:var(--view-2-background-color);
 }
 .left.panel #view3{
-    background-color:#245eff;
+    background-color:var(--view-3-background-color);
 }
 .left.panel #view4{
-    background-color:#1d3eff;
+    background-color:var(--view-4-background-color);
+}
+.right.panel #view1{
+    background-color:var(--r-view-1-background-color);
+}
+.right.panel #view2{
+    background-color:var(--r-view-2-background-color);
+}
+/* session panel */
+.left.panel #view1 * {
+    font-family:'Teko',serif;
 }
 .left.panel #view1 .session{
     font-weight:600;
